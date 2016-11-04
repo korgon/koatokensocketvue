@@ -1,0 +1,6 @@
+// Responsive breakpoint, pass in a pixel value
+@mixin respond($breakpoint) {
+	@media only screen and (min-width: $breakpoint + px) {
+		@content;
+	}
+}

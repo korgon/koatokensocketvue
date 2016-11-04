@@ -1,0 +1,27 @@
+{
+  "name": "koatokensocketvue",
+  "version": "0.0.1",
+  "description": "simple slim stack",
+  "main": "index.js",
+	"scripts": {
+    "preinstall": "node bin/preinstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korgon/koatokensocketvue.git"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "webtokens",
+    "socket.io",
+    "vue.js",
+    "js"
+  ],
+  "author": "korgon",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/korgon/koatokensocketvue/issues"
+  },
+  "homepage": "https://github.com/korgon/koatokensocketvue#readme"
+}

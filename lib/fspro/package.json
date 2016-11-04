@@ -1,0 +1,8 @@
+{
+  "name": "fspro",
+  "version": "1.1.1",
+  "description": "Several FS methods using promises",
+  "main": "index.js",
+  "author": "korgon",
+  "license": "GPL-3.0"
+}
