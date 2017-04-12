@@ -4,7 +4,7 @@
   "description": "simple slim stack",
   "main": "index.js",
 	"scripts": {
-    "preinstall": "node bin/preinstall"
+    "preinstall": "node bin/preinstall.js"
   },
   "repository": {
     "type": "git",

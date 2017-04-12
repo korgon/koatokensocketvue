@@ -1,0 +1,1 @@
+nodemon --ignore lib/vue --ignore lib/koa/public/ index.js

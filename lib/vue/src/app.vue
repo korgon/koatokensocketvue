@@ -1,32 +1,53 @@
 <template>
-	<div id="main">
-		<header id="above" class="box">header</header>
+	<div id="main" v-cloak>
+		<header id="above" class="box"><above :user="user" @invalidated="invalidated"></above></header>
 		<div id="center" class="box">
 			<main id="content" class="box">
-				<h1>{{ msg }}</h1>
-				<component :is="currentView"></component>
+				<component :is="currentView" @validated="validated"></component>
 			</main>
-			<nav id="sinister" class="box">left</nav>
-			<aside id="dexter" class="box">right</aside>
 		</div>
-		<footer id="below" class="box">footer</footer>
+		<footer id="below" class="box"><below></below></footer>
 	</div>
 </template>
 
 <script>
 	// components
-	var gears = require('./components/gears.vue');
+	var above = require('./views/above.vue');
+	var below = require('./views/below.vue');
+	var login = require('./views/login.vue');
+	var control = require('./views/control.vue');
+	var user = require('./views/user.vue');
 
 	module.exports = {
 		name: 'app',
 		components: {
-			gears
+			above,
+			below,
+			login,
+			control,
+			user
 		},
 		data: function() {
 			return {
-				msg: 'Getting Started with Vue. I like Vue. It makes this easier.',
-				currentView: gears
+				currentView: undefined,
+				user: undefined
 			}
+		},
+		created: function() {
+			// TODO
+			// check localstorage for jwt
+			// attempt to connect
+			this.currentView = 'login';
+		},
+		methods: {
+			validated: function(user) {
+				this.user = user;
+				this.currentView = 'control';
+			},
+			invalidated: function() {
+				this.user = undefined;
+				this.currentView = 'login';
+			},
 		}
 	}
 </script>
@@ -36,6 +57,7 @@
 
 	body {
 		margin: 0;
+		color: #8a9f9f;
 	}
 
 	#main {
@@ -44,7 +66,7 @@
 		flex-direction: column;
 
 		#above {
-			background-color: #555;
+
 		}
 
 		#center {
@@ -54,19 +76,10 @@
 			#content {
 
 			}
-
-			#sinister {
-				order: -1;
-			}
-
-			#dexter, #sinister {
-				border-radius: .2em;
-				background-color: #999;
-			}
 		}
 
 		#below {
-			background-color: #555;
+
 		}
 	}
 
@@ -78,10 +91,6 @@
 
 				#content {
 					flex: 1;
-				}
-
-				#dexter, #sinister {
-					flex: 0 0 12em;
 				}
 			}
 		}
