@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "socketvue",
   "version": "0.0.1",
   "description": "vue simple start",
   "scripts": {
@@ -12,12 +12,12 @@
   },
   "devDependencies": {
     "css-loader": "^0.25.0",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.5.2",
     "sass-loader": "^4.1.1",
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.13.2",
     "uglify-loader": "^1.4.0",
-    "vue-loader": "^10.0.2",
-    "vue-template-compiler": "^2.1.7",
-    "webpack": "^1.14.0"
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "^2.2.6",
+    "webpack": "^1.15.0"
   }
 }
