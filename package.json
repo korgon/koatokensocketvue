@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "simple slim stack",
   "main": "index.js",
-	"scripts": {
+  "scripts": {
     "preinstall": "node bin/preinstall.js"
   },
   "repository": {
