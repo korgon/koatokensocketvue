@@ -1,12 +1,15 @@
 "use strict";
 
-let conf = require('_/config')(__dirname);
-let core = require('_/core');
+let conf = require('./lib/config')(__dirname);
+let core = require('./lib/core');
 
-core.init(conf).then(function() {
-	let app = require('_/koa')(core);
-}).catch(function(err) {
-	console.log('failed to initialize!');
-	console.log(err);
-	process.exit(1);
-});
+(async () => {
+	try {
+		await core.init(conf)
+		let app = require('./lib/koa')(core);
+	} catch(err) {
+		console.log('failed to initialize!');
+		console.log(err);
+		process.exit(1);
+	}	
+})();

@@ -11,6 +11,6 @@
   "license": "GPL-3.0",
   "devDependencies": {},
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.4.0"
   }
 }

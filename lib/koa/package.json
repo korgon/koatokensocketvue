@@ -15,12 +15,12 @@
   "author": "korgon",
   "license": "GPL-3.0",
   "dependencies": {
-    "koa": "^2.8.1",
-    "koa-better-body": "^3.0.4",
-    "koa-favicon": "^2.0.1",
+    "koa": "^2.11.0",
+    "koa-better-body": "^3.3.9",
+    "koa-favicon": "^2.1.0",
     "koa-jwt": "^3.6.0",
     "koa-logger": "^3.2.1",
-    "koa-router": "^7.4.0",
+    "koa-router": "^8.0.8",
     "koa-socket": "^4.4.0",
     "koa-static": "^5.0.0"
   }
